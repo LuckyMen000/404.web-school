@@ -25,7 +25,9 @@ main {
     flex-direction: column;
     align-items: center;
 }
-
+a{
+    text-decoration:none ;
+}
 /* Хедер (фиксирован сверху) */
 /* Хедер (фиксирован сверху, стилизованный) */
 header {
