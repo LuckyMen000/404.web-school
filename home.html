@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>404-web.school</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">ЛОГО</div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Курсы</a></li>
+                    <li><a href="#">Программа курсов</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="promo">
+        <div class="promo-content">
+            <h2>Совершенствуйся вместе с 404.web-school</h2>
+            <p>Выходи на новый уровень! Участвуй в конкурсе и получи 70% скидку на обучение от "Молодого взгляда на IT-образование".</p>
+            <button class="open-modal">Участвовать</button>
+        </div>
+        <div class="promo-image">
+            <img src="./images/placeholder.png" alt="Заглушка">
+        </div>
+    </section>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Примите участие в конкурсе и выиграйте 70% скидку на обучении!!</h2>
+            <form>
+                <label for="name">Имя:</label>
+                <input type="text" id="name" required>
+
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" required>
+
+                <label for="direction">Направление, которое хотите изучить:</label>
+                <input type="text" id="direction" required>
+
+                <button type="submit" class="submit-button">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
