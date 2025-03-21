@@ -215,3 +215,350 @@ input {
 .submit-button:hover {
     background-color: #b83232;
 }
+/* Контейнер баннера */
+.banner-container {
+    width: 100%;
+    background: linear-gradient(135deg, #121826, #1b2435); /* Темный градиент под цвет страницы */
+    padding: 15px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ddd; /* Светло-серый текст */
+    overflow: hidden;
+}
+
+/* Эффект плавной смены текста */
+.banner {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+
+/* Секция курсов */
+.courses {
+    padding: 40px 5%;
+    background: #0a0f1e; /* Темнее, ближе к темному UI */
+    color: white;
+}
+
+/* Заголовок "Все курсы" */
+.courses h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: left;
+    color: #f0f0f0;
+}
+
+/* Контейнер с курсами */
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Карточка курса (фон + градиентная рамка) */
+.course-card {
+    background: linear-gradient(145deg, #1c2333, #29314a); /* Градиент */
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 2px solid transparent; /* Градиентная обводка */
+    position: relative;
+}
+
+/* Эффект при наведении */
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.2);
+    border: 2px solid #6a5acd; /* Фиолетовая рамка */
+}
+
+/* Логотип курса - УВЕЛИЧЕН */
+.course-card img {
+    width: 85%;
+    max-width: 250px;
+    height: auto;
+    max-height: 170px; /* Ограничение высоты */
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+
+/* Заголовки */
+.course-card h3 {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.course-card h4 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+/* Описание */
+.course-card p {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: #d0d0d0;
+    line-height: 1.4;
+}
+
+/* Кнопка "Подробнее" (новый цвет + световой эффект) */
+.course-btn {
+    background: linear-gradient(90deg, #ff4d4d, #ff1a1a);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 0px 4px 10px rgba(255, 77, 77, 0.5);
+}
+
+/* Эффект при наведении */
+.course-btn:hover {
+    background: linear-gradient(90deg, #ff6666, #ff3333);
+    box-shadow: 0px 6px 15px rgba(255, 77, 77, 0.8);
+}
+
+
+/* Секция программы курсов */
+.course-program {
+    padding: 40px 5%;
+    background: #0a0f1e;
+    color: white;
+}
+
+/* Заголовок */
+.course-program h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: left;
+    color: #f0f0f0;
+}
+
+/* Навигация по курсам */
+/* Контейнер с кнопками выбора курса */
+.course-tabs {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Центрирование кнопок */
+    flex-wrap: wrap; /* Чтобы кнопки не выходили за границы */
+}
+
+
+/* Кнопки для выбора курса */
+.tab-button {
+    background: #1c2333;
+    color: #f0f0f0;
+    border: none;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Активная кнопка */
+.tab-button.active {
+    background: #6a5acd;
+}
+
+/* Контейнер для контента курсов */
+.course-content {
+    margin-top: 20px;
+    padding: 20px;
+    background: #121826;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Список программы курса */
+.course-details {
+    display: none;
+}
+
+/* Активный блок программы */
+.course-details.active {
+    display: block;
+}
+
+/* Список тем курса */
+.course-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-details li {
+    background: #1e2638;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #d0d0d0;
+    transition: background 0.3s ease;
+}
+
+/* Эффект при наведении на тему курса */
+.course-details li:hover {
+    background: #6a5acd;
+}
+
+
+/* Секция "Кому подойдет курс?" */
+.course-sad__hamster {
+    padding: 40px 5%;
+    background: #0a0f1e;
+    color: white;
+}
+
+/* Заголовок */
+.course-sad__hamster h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: left;
+    color: #f0f0f0;
+}
+
+/* Основной контейнер */
+.course-target {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #d9d9d9;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* Левый список */
+.target-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 60%;
+}
+
+/* Карточки с номерами */
+.target-item {
+    display: flex;
+    align-items: center;
+    background: #4169E1;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Эффект при наведении */
+.target-item:hover {
+    transform: translateX(5px);
+}
+
+/* Номера */
+.target-number {
+    width: 40px;
+    height: 40px;
+    background: #1a1f3d;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+
+/* Хомяк */
+/* Контейнер с хомяком */
+.hamster-container {
+    width: 40%; /* Увеличил контейнер */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Изображение хомяка */
+.hamster-container img {
+    width: 100%;
+    max-width: 350px; /* Сделал больше */
+    height: auto;
+}
+
+
+
+/* Речевое облачко */
+.hamster-speech {
+    position: absolute;
+    top: 30%;
+    left: -50px;
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Основной контейнер */
+.youtube {
+    padding: 50px 5%;
+    background: #0a0f1e;
+    color: white;
+}
+
+/* Контейнер для выравнивания */
+.youtube-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #d9d9d9;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+/* Текстовые блоки */
+.youtube-text {
+    width: 30%;
+    font-size: 16px;
+    color: black;
+}
+
+/* Видео */
+.youtube-video {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Видео iframe */
+.youtube-video iframe {
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
